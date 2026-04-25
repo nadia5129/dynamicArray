@@ -24,7 +24,8 @@ public class DynamicStringList implements StringList{
     }
 
     public void add(String value){
-
+       arr[size] = value;
+       size++;
     }
 
     public String remove(int index){
