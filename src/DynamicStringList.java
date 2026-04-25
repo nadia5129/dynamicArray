@@ -40,6 +40,8 @@ public class DynamicStringList implements StringList{
         return removedValue;
     }
 
+
+    
     public int size(){
         return size;
     }
