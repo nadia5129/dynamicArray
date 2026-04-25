@@ -5,10 +5,13 @@ public class DynamicStringListTest {
     @Test
     public void testAddAndGet() {
         StringList list = new DynamicStringList();
+        //arrange
+        //act
         list.add("Hello");
         list.add("World");
-        assert list.get(0).equals("Hello");
-        assert list.get(1).equals("World");
+        //assert
+        assertEquals("Hello", list.get(0));
+        assertEquals("World", list.get(1));
     }
 
 
@@ -30,21 +33,27 @@ public class DynamicStringListTest {
     @Test 
     public void testCapacity() {
         StringList list = new DynamicStringList();
+        //Arrange
         assert list.capacity() == 4; // Initial capacity
+        //Act
         list.add("A");
         list.add("B");
         list.add("C");
         list.add("D");
-        assert list.capacity() == 4; // Capacity should still be 4
+        //Assert
+        assertEquals(4, list.capacity()); // Capacity should still be 4
     }
 
     @Test
     public void testSize() {
         StringList list = new DynamicStringList();
+        //Arrange
         assert list.size() == 0; // Initial size
+        //Act
         list.add("A");
         list.add("B");
-        assert list.size() == 2; // Size should be 2 after adding two elements
+        //Assert
+        assertEquals(2, list.size()); // Size should be 2 after adding two elements
     }
 
     @Test 
