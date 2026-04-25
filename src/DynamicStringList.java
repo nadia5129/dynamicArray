@@ -29,7 +29,15 @@ public class DynamicStringList implements StringList{
     }
 
     public String remove(int index){
-        return null;
+        if (index < 0 || index >= size){
+            throw new IndexOutOfBoundsException();
+        }        
+         String removedValue = arr[index];
+        for (int i = index; i < size - 1; i++){
+            arr[i] = arr[i + 1];
+        }
+        size--;
+        return removedValue;
     }
 
     public int size(){
