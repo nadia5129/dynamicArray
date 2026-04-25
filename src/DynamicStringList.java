@@ -41,11 +41,11 @@ public class DynamicStringList implements StringList{
     }
 
     public int size(){
-        return 0;
+        return size;
     }
 
     public int capacity(){
-        return 0;
+        return arr.length;
     }
 
 }
