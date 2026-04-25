@@ -6,9 +6,9 @@ public class DynamicStringListTest {
     public void testAddAndGet() {
         StringList list = new DynamicStringList();
         //arrange
-        //act
         list.add("Hello");
         list.add("World");
+        //act
         //assert
         assertEquals("Hello", list.get(0));
         assertEquals("World", list.get(1));
