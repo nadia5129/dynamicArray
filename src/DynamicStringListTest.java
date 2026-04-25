@@ -47,4 +47,21 @@ public class DynamicStringListTest {
         assert list.size() == 2; // Size should be 2 after adding two elements
     }
 
+    @Test 
+    public void testRemove(){
+
+         DynamicStringList list = new DynamicStringList();
+        //arrange
+        list.add("a");
+        list.add("b");
+
+        //assert
+        String actual = list.remove(0);
+
+        //act
+        assertEquals("a", actual);
+        assertEquals(1, list.size());
+        
+    }
+
 }
