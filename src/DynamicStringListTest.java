@@ -64,10 +64,10 @@ public class DynamicStringListTest {
         list.add("a");
         list.add("b");
 
-        //assert
+        //act
         String actual = list.remove(0);
 
-        //act
+        //assert
         assertEquals("a", actual);
         assertEquals(1, list.size());
         
